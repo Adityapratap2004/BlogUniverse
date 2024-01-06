@@ -1,0 +1,115 @@
+.account{
+    height: calc(100vh - 80px);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account h2{
+    color: black;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.account > div{
+    width:70%;
+    height:70%;
+    padding: 30px;
+    background: white;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0 0 0 / 8%);
+}
+.info{
+    display: flex;
+    width: 95%;
+    gap:30px;
+    justify-content: space-between;
+}
+
+.info .profileImg{
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    border: none;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.info div:nth-child(2){
+    width: calc(100% - 170px);
+    margin: 0 auto;
+}
+
+.info div:nth-child(1){
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.userdetailform{
+    display: flex;
+    flex-direction: column;
+}
+
+.userdetailform input{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    font-size:16px;
+    /* border: none; */
+    /* outline: none; */
+}
+
+.userdetailform label{
+    font-size: 18px;
+}
+
+.info button{
+    width: 100px;
+    height: 40px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+
+    .account h2{
+        font-size: 28px;
+    }
+    .info{
+        flex-direction: column;
+        align-items: start;
+        
+    }
+
+    .account > div{
+        width:85%;
+        height:92%;
+        
+    }
+    .info .profileImg{
+        width: 100px;
+        height: 100px;
+       
+    }
+    
+    .info div:nth-child(2),.info div:nth-child(1){
+        width: 100%;
+    }
+    .info button{
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+        
+    }
+    
+  }
+  

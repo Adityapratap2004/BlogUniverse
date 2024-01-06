@@ -1,0 +1,85 @@
+.category {
+  margin-top: 50px;
+}
+
+.category ::after{
+  background: rgb(0 0 0 / 16%);
+  height:250px ;
+  width: 100%;
+  position: absolute;
+
+}
+
+.scroll {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.scroll img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 2;
+  top: 80px;
+  width: 100%;
+}
+
+.overlay h4 {
+  font-size: 24px;
+  color: rgb(253, 246, 126);
+}
+
+.overlay p {
+  color: #fff;
+}
+
+.arrowleft {
+  position: absolute;
+  cursor: pointer;
+  z-index: 99;
+  top: 40%;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:40px ;  
+ 
+}
+
+.arrowleft svg{
+  position: absolute;
+  color: rgb(171, 167, 167);
+}
+
+.arrowleft svg:hover{
+  color:gray;
+}
+
+.arrowright {
+  position: absolute;
+  cursor: pointer;
+  z-index: 99;
+  top: 40%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:40px ;  
+  right: 10px;
+}
+.arrowright svg{
+  position: absolute;
+  color: rgb(171, 167, 167);
+}
+
+.arrowright svg:hover{
+  color:gray;
+}

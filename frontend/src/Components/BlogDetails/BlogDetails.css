@@ -1,0 +1,152 @@
+.blogdetail {
+  width: 95%;
+  margin: auto;
+}
+
+.blogimg {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.blogimg img {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  object-fit:cover;
+  }
+
+.blogheading {
+  position: relative;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.blogheading h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.edit {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  display: flex;
+  gap: 10px;
+}
+
+.edit p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+}
+
+.edit p:hover {
+  cursor: pointer;
+}
+.edit p:nth-child(1) {
+  background-color: red;
+}
+
+.edit p:nth-child(2) {
+  background-color: blue;
+}
+
+.edit p:nth-child(3) {
+  background-color: rgb(32, 185, 32);
+}
+
+.edit p:nth-child(4) {
+  background-color: orangered;
+}
+
+.author {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 17px;
+}
+
+.author div span:nth-child(1) {
+  margin-right: 5px;
+}
+.author div span:nth-child(2) {
+  font-weight: 500;
+}
+
+.content {
+  font-size: 15px;
+
+  margin: 20px 0;
+  text-indent: 30px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  color: #959393;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.back {
+  background: orangered;
+  width: 120px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .blogheading h1 {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blogimg img {
+    height: 300px;
+  }
+  .blogdetail {
+    width: 92%;
+  }
+  .edit {
+    position: relative;
+    margin: 15px 5px;
+  }
+  .author {
+    flex-direction: column;
+  }
+  .blogimg {
+    margin-top: 20px;
+  }
+
+  .back {
+    width: 100px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  /* .editpost .postdetails{
+    width: 95%;
+  }
+
+  .editpost .postdetails textarea{
+    font-size: 16px;
+  } */
+
+  
+}

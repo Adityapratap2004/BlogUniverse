@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body{
+  font-family: 'Bai Jamjuree', sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+  overflow-x: hidden;
+}
+
+ul,li,a{
+  cursor: pointer;
+  text-decoration: none;
+  list-style-type: none;
+  
+}
+
+
+section {
+  height: 200vh;
+}

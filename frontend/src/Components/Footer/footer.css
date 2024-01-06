@@ -1,0 +1,36 @@
+.footer{
+    width: 100%;
+    box-shadow: 0 -1px 4px rgba(0 0 0 / 8%);
+    background: #fff;
+    /* color: rgb(139, 132, 132); */
+    color: black;
+  
+}
+
+.cont{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+    
+}
+
+.link {
+    display: flex;
+    gap:60px;  
+    font-size: 19px;  
+}
+
+a{
+    color: black;
+}
+
+@media screen and (max-width:800px) {
+    .footer{
+        font-size: 12px;
+    }
+    
+}

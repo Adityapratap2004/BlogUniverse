@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { setLogin } from '../../State/Slice/authSlice';
 import { setUser } from '../../State/Slice/userSlice';
 import {toast} from "react-toastify"
+import { setLoader } from '../../State/Slice/loaderSlice';
 
 
 
@@ -19,6 +20,7 @@ const Login = () => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch(setLoader(true));
     const res = await login(cridentials);
     if (res.success) {
      
@@ -41,6 +43,7 @@ const Login = () => {
       
       
     }
+    dispatch(setLoader(false));
   }
   console.log(cridentials)
   return (

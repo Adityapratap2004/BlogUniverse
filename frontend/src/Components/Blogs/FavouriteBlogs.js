@@ -4,15 +4,21 @@ import "./blogs.css"
 import { PiSmileySadLight } from 'react-icons/pi'
 import { getFavBlogs } from '../../Api/userApi'
 import {toast} from "react-toastify"
+import { useDispatch } from 'react-redux'
+import { setLoader } from '../../State/Slice/loaderSlice'
 
 
 
 const FavouriteBlogs = () => {
     const [blogs,setBlogs]=useState([]);
+    const dispatch=useDispatch();
 
     useEffect(() => {
         const getBlogs = async () => {
+          dispatch(setLoader(true));
+
           const res = await getFavBlogs();
+
           if (res.success) {
             console.log("",res.favblogs.favourite)
             setBlogs(res.favblogs.favourite);   
@@ -21,6 +27,7 @@ const FavouriteBlogs = () => {
             console.log("Error", res.error);
             toast.error(res.error);
           }
+          dispatch(setLoader(false));
         }
         getBlogs();
       },[])

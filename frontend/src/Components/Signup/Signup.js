@@ -7,6 +7,7 @@ import { setLogin } from '../../State/Slice/authSlice';
 import { signup } from '../../Api/AuthApi';
 import { setUser } from '../../State/Slice/userSlice';
 import {  toast } from 'react-toastify';
+import { setLoader } from '../../State/Slice/loaderSlice';
 
 
 const Signup = () => {
@@ -18,6 +19,7 @@ const Signup = () => {
   }
 
   const handleSubmit = async (e) => {
+    dispatch(setLoader(true));
     e.preventDefault();
     const res = await signup(cridentials);
     if (res.success) {
@@ -33,6 +35,7 @@ const Signup = () => {
       console.log("Error", res.error);
       toast.error(res.error);
     }
+    dispatch(setLoader(false));
   }
   
   return (

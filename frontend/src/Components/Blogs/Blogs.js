@@ -7,6 +7,7 @@ import { setBlogs } from '../../State/Slice/blogsSlice'
 import { PiSmileySadLight } from 'react-icons/pi'
 import { useLocation } from 'react-router-dom'
 import {toast} from "react-toastify"
+import { setLoader } from '../../State/Slice/loaderSlice'
 
 export const Blogs = () => {
   const blogs = useSelector(state => state.Blogs);
@@ -42,6 +43,7 @@ export const Blogs = () => {
     setHash(location.hash.slice(1));
 
     const getBlogs = async () => {
+      dispatch(setLoader(true));
       const res = await getblogs();
       if (res.success) {
         console.log(res.blogs)
@@ -52,6 +54,7 @@ export const Blogs = () => {
         console.log("Error", res.error);
         toast.error(res.error );
       }
+      dispatch(setLoader(false));
     }
     getBlogs();
   },[location.hash])

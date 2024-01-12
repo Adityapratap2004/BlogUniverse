@@ -118,6 +118,7 @@ let BlogDetail = () => {
 
   useEffect(() => {
     const getDetails = async () => {
+      dispatch(setLoader(true));
       const res = await getBlogById(id);
       if (res.success) {
         setblog(res.blogs);
@@ -131,6 +132,7 @@ let BlogDetail = () => {
       else {
         console.log("Error", res.error);
       }
+      dispatch(setLoader(false));
     }
     getDetails();
   }, [id]);
